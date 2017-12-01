@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="34"
-  DTS:VersionGUID="{E8100388-ABA8-4AEF-89EF-AA5A01A0808E}">
+  DTS:VersionBuild="41"
+  DTS:VersionGUID="{5BE2794D-2166-4244-AD9B-D5DB7E9C5978}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -146,7 +146,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAR4KikAd6IkG0Cp23fu2MfwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB8KcP8hfMDrusrUBgCX++Nt76mOd+7lV3JsM0fhMw3ewAAAAAOgAAAAAIAACAAAABhvvAa3LchFbAx7tY2GNND0Z0/vby27psdPS+TTchyUCAAAAA0rNmwuXF6EcfejAnGv3EwhU6Wxvbby3z3PaOnn8VKa0AAAACNBEhgoBBwSsWEzodyVyom11w7X0QGftI1ySxgEc8sMHpP8myFj2FaC0pJlmN0KZIhAeAVzrWvkCEBoMRKmnCO</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAR4KikAd6IkG0Cp23fu2MfwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAf6CMkxbXQis/3D74U3Zgct1ZfKHnWbuXf+CeYsk8PsAAAAAAOgAAAAAIAACAAAAAg42uO/DsQ5Vd18mOIbhsv8spPVQQpZQ/3IugRULKC7CAAAADqvXEUiozXs2efuCw+MocFn9Mp1iv2SWeATTOY0fJNBkAAAAAjw2dgZLY/U5alpcdM5DQoGkM3fQx+4ohakoZFOnC8UkTKNHKoYaKO71Jz7EtYlGDFsrlHQyt+Eh4MFxgVGU6l</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -161,7 +161,43 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAR4KikAd6IkG0Cp23fu2MfwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACKEvZhtVHjN+fc09cY6LUQhNAfykuZp4T9+MF0lIV1DwAAAAAOgAAAAAIAACAAAAAJw1fCkZPMfSqR9wJuQJSXbmv7vBDRr7I2iOB15qyogSAAAADaSjSCjomn50IDfhcecAk0y4ZK94TNiqbKRU8L4S/RhUAAAAB4pfb0pWMuGiUdtqsSHaFhF+FD8FX+bMtpeRaacU5qjzKc5V4W0K2cvNn8Mmmbz+mEswT5CdHQQ4FSWWUq9EXB</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAR4KikAd6IkG0Cp23fu2MfwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACgQON9ZOghMfm6tmL6TSXy+UvIPkar/7UwLgXz4+EEvQAAAAAOgAAAAAIAACAAAAAkA/pSGPPUDydZBAcDI29JQBULfmpAGmcsrMrrxud+xSAAAAAUrGCYJwlG0JM9e6aAc224QIQFgJW2mczDDVMQux0neEAAAADnguo+Mk8A7k2cse88v2FuvqEy6sM1WssDwbsrM+0y0sE3bbJFWAHxlY1SXQxMeJkymQJCa5EdFD+02zSjmPQ9</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Salida]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{1EC1B2CB-1D01-480C-8786-D64984903357}"
+      DTS:ObjectName="Salida">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3082"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Downloads\paysim1\resultado1.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Amount"
+              DTS:DTSID="{BC665A22-E8DE-4A62-A591-E10EA4658E45}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IsFraud"
+              DTS:DTSID="{712263F9-746F-46C6-8543-25FDEA65CC62}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -181,24 +217,32 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{01CDC88E-7C19-4426-B8E0-FA6AE4D134DD}"
-      DTS:IncludeInDebugDump="2345"
+      DTS:DTSID="{F01C7AF6-C52F-4F13-B015-45922489BA8B}"
+      DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
-      DTS:ObjectName="FullFilePath">
+      DTS:ObjectName="TotalInsertedRegisters">
       <DTS:VariableValue
-        DTS:DataType="8"
-        xml:space="preserve"></DTS:VariableValue>
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{ADADED39-E808-468E-9695-A63F22FD6845}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="TotalrejectedRegisters">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Tarea Flujo de datos"
+      DTS:refId="Package\Carga de Datos"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarea Flujo de datos"
       DTS:DTSID="{ABB44316-9A1B-431F-B034-B18609E947D5}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Tarea Flujo de datos"
+      DTS:ObjectName="Carga de Datos"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -206,7 +250,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Tarea Flujo de datos\Conversión de datos"
+              refId="Package\Carga de Datos\Conversión de datos"
               componentClassID="Microsoft.DataConvert"
               contactInfo="Conversión de datos;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
               description="Conversión de datos"
@@ -214,103 +258,103 @@
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos]"
+                  refId="Package\Carga de Datos\Conversión de datos.Inputs[Entrada de conversión de datos]"
                   name="Entrada de conversión de datos">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[step]"
+                      refId="Package\Carga de Datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[step]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="step"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[step]" />
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[step]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[type]"
+                      refId="Package\Carga de Datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[type]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="type"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[type]" />
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[type]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[amount]"
+                      refId="Package\Carga de Datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[amount]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="amount"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[amount]" />
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[amount]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[nameOrig]"
+                      refId="Package\Carga de Datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[nameOrig]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="nameOrig"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[nameOrig]" />
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[nameOrig]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[oldbalanceOrg]"
+                      refId="Package\Carga de Datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[oldbalanceOrg]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="oldbalanceOrg"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[oldbalanceOrg]" />
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[oldbalanceOrg]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[newbalanceOrig]"
+                      refId="Package\Carga de Datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[newbalanceOrig]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="newbalanceOrig"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[newbalanceOrig]" />
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[newbalanceOrig]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[nameDest]"
+                      refId="Package\Carga de Datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[nameDest]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="nameDest"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[nameDest]" />
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[nameDest]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[oldbalanceDest]"
+                      refId="Package\Carga de Datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[oldbalanceDest]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="oldbalanceDest"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[oldbalanceDest]" />
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[oldbalanceDest]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[newbalanceDest]"
+                      refId="Package\Carga de Datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[newbalanceDest]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="newbalanceDest"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[newbalanceDest]" />
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[newbalanceDest]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[isFraud]"
+                      refId="Package\Carga de Datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[isFraud]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="isFraud"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[isFraud]" />
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[isFraud]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[isFlaggedFraud]"
+                      refId="Package\Carga de Datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[isFlaggedFraud]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="isFlaggedFraud"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[isFlaggedFraud]" />
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[isFlaggedFraud]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos]"
+                  refId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos]"
                   exclusionGroup="1"
                   name="Salida de conversión de datos"
-                  synchronousInputId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos]">
+                  synchronousInputId="Package\Carga de Datos\Conversión de datos.Inputs[Entrada de conversión de datos]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Step1]"
+                      refId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Step1]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Step1]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Step1]"
                       name="Step1"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -318,7 +362,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[step]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[step]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -326,13 +370,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[tipe1]"
+                      refId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[tipe1]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[tipe1]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[tipe1]"
                       name="tipe1"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -340,7 +384,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[type]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[type]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -348,11 +392,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[amount1]"
+                      refId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[amount1]"
                       dataType="decimal"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="RedirectRow"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[amount1]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[amount1]"
                       name="amount1"
                       scale="20"
                       truncationRowDisposition="IgnoreFailure">
@@ -361,7 +405,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[amount]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[amount]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -369,13 +413,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[nameOrig1]"
+                      refId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[nameOrig1]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[nameOrig1]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[nameOrig1]"
                       name="nameOrig1"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -383,7 +427,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[nameOrig]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[nameOrig]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -391,11 +435,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[oldbalanceOrg1]"
+                      refId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[oldbalanceOrg1]"
                       dataType="decimal"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="RedirectRow"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[oldbalanceOrg1]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[oldbalanceOrg1]"
                       name="oldbalanceOrg1"
                       scale="20"
                       truncationRowDisposition="IgnoreFailure">
@@ -404,7 +448,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[oldbalanceOrg]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[oldbalanceOrg]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -412,11 +456,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[newbalanceOrig1]"
+                      refId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[newbalanceOrig1]"
                       dataType="decimal"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="RedirectRow"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[newbalanceOrig1]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[newbalanceOrig1]"
                       name="newbalanceOrig1"
                       scale="20"
                       truncationRowDisposition="IgnoreFailure">
@@ -425,7 +469,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[newbalanceOrig]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[newbalanceOrig]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -433,13 +477,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[nameDest1]"
+                      refId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[nameDest1]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[nameDest1]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[nameDest1]"
                       name="nameDest1"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -447,7 +491,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[nameDest]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[nameDest]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -455,11 +499,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[oldbalanceDest1]"
+                      refId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[oldbalanceDest1]"
                       dataType="decimal"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="RedirectRow"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[oldbalanceDest1]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[oldbalanceDest1]"
                       name="oldbalanceDest1"
                       scale="20"
                       truncationRowDisposition="IgnoreFailure">
@@ -468,7 +512,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[oldbalanceDest]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[oldbalanceDest]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -476,11 +520,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[newbalanceDest1]"
+                      refId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[newbalanceDest1]"
                       dataType="decimal"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="RedirectRow"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[newbalanceDest1]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[newbalanceDest1]"
                       name="newbalanceDest1"
                       scale="20"
                       truncationRowDisposition="FailComponent">
@@ -489,7 +533,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[newbalanceDest]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[newbalanceDest]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -497,11 +541,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[isFraud1]"
+                      refId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[isFraud1]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[isFraud1]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[isFraud1]"
                       name="isFraud1"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -509,7 +553,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[isFraud]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[isFraud]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -517,11 +561,11 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[isFlaggedFraud1]"
+                      refId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[isFlaggedFraud1]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[isFlaggedFraud1]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[isFlaggedFraud1]"
                       name="isFlaggedFraud1"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -529,7 +573,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[isFlaggedFraud]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[isFlaggedFraud]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -540,22 +584,22 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos]"
+                  refId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de error de conversión de datos]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de conversión de datos"
-                  synchronousInputId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos]">
+                  synchronousInputId="Package\Carga de Datos\Conversión de datos.Inputs[Entrada de conversión de datos]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      refId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      refId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -564,7 +608,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Tarea Flujo de datos\Destino de OLE DB"
+              refId="Package\Carga de Datos\Destino de OLE DB"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
               description="Destino de OLE DB"
@@ -621,7 +665,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tarea Flujo de datos\Destino de OLE DB.Connections[OleDbConnection]"
+                  refId="Package\Carga de Datos\Destino de OLE DB.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[PC-JACG.ZemogaExercise.sa1]"
                   connectionManagerRefId="Package.ConnectionManagers[PC-JACG.ZemogaExercise.sa1]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
@@ -629,144 +673,144 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
                   errorOrTruncationOperation="Insertar"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrada de destino de OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Step1]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Step1]"
                       cachedDataType="i4"
                       cachedName="Step1"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Step]"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Step1]" />
+                      externalMetadataColumnId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Step]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Step1]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[tipe1]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[tipe1]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="tipe1"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Type]"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[tipe1]" />
+                      externalMetadataColumnId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Type]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[tipe1]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[amount1]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[amount1]"
                       cachedDataType="decimal"
                       cachedName="amount1"
                       cachedScale="20"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Amount]"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[amount1]" />
+                      externalMetadataColumnId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Amount]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[amount1]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[nameOrig1]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[nameOrig1]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="nameOrig1"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[NameOrig]"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[nameOrig1]" />
+                      externalMetadataColumnId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[NameOrig]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[nameOrig1]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[oldbalanceOrg1]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[oldbalanceOrg1]"
                       cachedDataType="decimal"
                       cachedName="oldbalanceOrg1"
                       cachedScale="20"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[OldBalanceOrg]"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[oldbalanceOrg1]" />
+                      externalMetadataColumnId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[OldBalanceOrg]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[oldbalanceOrg1]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[newbalanceOrig1]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[newbalanceOrig1]"
                       cachedDataType="decimal"
                       cachedName="newbalanceOrig1"
                       cachedScale="20"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[NewBalanceOrig]"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[newbalanceOrig1]" />
+                      externalMetadataColumnId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[NewBalanceOrig]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[newbalanceOrig1]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[nameDest1]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[nameDest1]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="nameDest1"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[NameDest]"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[nameDest1]" />
+                      externalMetadataColumnId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[NameDest]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[nameDest1]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[oldbalanceDest1]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[oldbalanceDest1]"
                       cachedDataType="decimal"
                       cachedName="oldbalanceDest1"
                       cachedScale="20"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[OldBalanceDest]"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[oldbalanceDest1]" />
+                      externalMetadataColumnId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[OldBalanceDest]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[oldbalanceDest1]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[newbalanceDest1]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[newbalanceDest1]"
                       cachedDataType="decimal"
                       cachedName="newbalanceDest1"
                       cachedScale="20"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[NewBalanceDest]"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[newbalanceDest1]" />
+                      externalMetadataColumnId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[NewBalanceDest]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[newbalanceDest1]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[isFraud1]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[isFraud1]"
                       cachedDataType="i4"
                       cachedName="isFraud1"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[IsFraud]"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[isFraud1]" />
+                      externalMetadataColumnId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[IsFraud]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[isFraud1]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[isFlaggedFraud1]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[isFlaggedFraud1]"
                       cachedDataType="i4"
                       cachedName="isFlaggedFraud1"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[IsFlaggedFraud]"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[isFlaggedFraud1]" />
+                      externalMetadataColumnId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[IsFlaggedFraud]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[isFlaggedFraud1]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[TransactionsId]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[TransactionsId]"
                       dataType="i4"
                       name="TransactionsId" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Step]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Step]"
                       dataType="i8"
                       name="Step" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Type]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Type]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Type" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Amount]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Amount]"
                       dataType="cy"
                       name="Amount" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[NameOrig]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[NameOrig]"
                       codePage="1252"
                       dataType="str"
                       length="500"
                       name="NameOrig" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[OldBalanceOrg]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[OldBalanceOrg]"
                       dataType="cy"
                       name="OldBalanceOrg" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[NewBalanceOrig]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[NewBalanceOrig]"
                       dataType="cy"
                       name="NewBalanceOrig" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[NameDest]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[NameDest]"
                       codePage="1252"
                       dataType="str"
                       length="500"
                       name="NameDest" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[OldBalanceDest]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[OldBalanceDest]"
                       dataType="cy"
                       name="OldBalanceDest" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[NewBalanceDest]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[NewBalanceDest]"
                       dataType="cy"
                       name="NewBalanceDest" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[IsFraud]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[IsFraud]"
                       dataType="i8"
                       name="IsFraud" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[IsFlaggedFraud]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[IsFlaggedFraud]"
                       dataType="i8"
                       name="IsFlaggedFraud" />
                   </externalMetadataColumns>
@@ -774,22 +818,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
+                  refId="Package\Carga de Datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de destino de OLE DB"
-                  synchronousInputId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]">
+                  synchronousInputId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Carga de Datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Carga de Datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Carga de Datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -798,7 +842,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Tarea Flujo de datos\Destino de OLE DB 1"
+              refId="Package\Carga de Datos\Destino de OLE DB 1"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
               description="Destino de OLE DB"
@@ -855,7 +899,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tarea Flujo de datos\Destino de OLE DB 1.Connections[OleDbConnection]"
+                  refId="Package\Carga de Datos\Destino de OLE DB 1.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[PC-JACG.ZemogaExercise.sa1]"
                   connectionManagerRefId="Package.ConnectionManagers[PC-JACG.ZemogaExercise.sa1]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
@@ -863,41 +907,41 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Tarea Flujo de datos\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB]"
+                  refId="Package\Carga de Datos\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB]"
                   errorOrTruncationOperation="Insertar"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrada de destino de OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].Columns[ErrorCode]"
+                      refId="Package\Carga de Datos\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].Columns[ErrorCode]"
                       cachedDataType="i4"
                       cachedName="ErrorCode"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].ExternalColumns[ErrorCode]"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]" />
+                      externalMetadataColumnId="Package\Carga de Datos\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].ExternalColumns[ErrorCode]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Carga de Datos\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].Columns[ErrorColumn]"
                       cachedDataType="i4"
                       cachedName="ErrorColumn"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].ExternalColumns[ErrorColumn]"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]" />
+                      externalMetadataColumnId="Package\Carga de Datos\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].ExternalColumns[ErrorId]"
+                      refId="Package\Carga de Datos\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].ExternalColumns[ErrorId]"
                       dataType="i8"
                       name="ErrorId" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].ExternalColumns[ErrorColumn]"
+                      refId="Package\Carga de Datos\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].ExternalColumns[ErrorColumn]"
                       dataType="i4"
                       name="ErrorColumn" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].ExternalColumns[ErrorDate]"
+                      refId="Package\Carga de Datos\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].ExternalColumns[ErrorDate]"
                       dataType="dbTimeStamp"
                       name="ErrorDate" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].ExternalColumns[ErrorCode]"
+                      refId="Package\Carga de Datos\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB].ExternalColumns[ErrorCode]"
                       dataType="i4"
                       name="ErrorCode" />
                   </externalMetadataColumns>
@@ -905,22 +949,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de datos\Destino de OLE DB 1.Outputs[Salida de error de destino de OLE DB]"
+                  refId="Package\Carga de Datos\Destino de OLE DB 1.Outputs[Salida de error de destino de OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de destino de OLE DB"
-                  synchronousInputId="Package\Tarea Flujo de datos\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB]">
+                  synchronousInputId="Package\Carga de Datos\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB 1.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      refId="Package\Carga de Datos\Destino de OLE DB 1.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Destino de OLE DB 1.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Carga de Datos\Destino de OLE DB 1.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Destino de OLE DB 1.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Carga de Datos\Destino de OLE DB 1.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Destino de OLE DB 1.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Carga de Datos\Destino de OLE DB 1.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -929,7 +973,65 @@
               </outputs>
             </component>
             <component
-              refId="Package\Tarea Flujo de datos\Origen de archivo plano"
+              refId="Package\Carga de Datos\Filas Excluidas"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Recuento de filas;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Cuenta las filas a medida que pasan por un flujo de datos. Por ejemplo, se usa el número de filas procesadas para determinar si deben o no realizarse operaciones de limpieza o actualizar el texto de un mensaje de correo electrónico para comunicar el estado de procesamiento."
+              name="Filas Excluidas">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el recuento de filas."
+                  name="VariableName">User::TotalrejectedRegisters</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Carga de Datos\Filas Excluidas.Inputs[Entrada de Recuento de filas 1]"
+                  hasSideEffects="true"
+                  name="Entrada de Recuento de filas 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Carga de Datos\Filas Excluidas.Outputs[Salida de Recuento de filas 1]"
+                  name="Salida de Recuento de filas 1"
+                  synchronousInputId="Package\Carga de Datos\Filas Excluidas.Inputs[Entrada de Recuento de filas 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Carga de Datos\Filas Ingresadas"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Recuento de filas;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Cuenta las filas a medida que pasan por un flujo de datos. Por ejemplo, se usa el número de filas procesadas para determinar si deben o no realizarse operaciones de limpieza o actualizar el texto de un mensaje de correo electrónico para comunicar el estado de procesamiento."
+              name="Filas Ingresadas">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el recuento de filas."
+                  name="VariableName">User::TotalInsertedRegisters</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Carga de Datos\Filas Ingresadas.Inputs[Entrada de Recuento de filas 1]"
+                  hasSideEffects="true"
+                  name="Entrada de Recuento de filas 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Carga de Datos\Filas Ingresadas.Outputs[Salida de Recuento de filas 1]"
+                  name="Salida de Recuento de filas 1"
+                  synchronousInputId="Package\Carga de Datos\Filas Ingresadas.Inputs[Entrada de Recuento de filas 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Carga de Datos\Origen de archivo plano"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
               description="Origen de archivo plano"
@@ -949,25 +1051,25 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tarea Flujo de datos\Origen de archivo plano.Connections[FlatFileConnection]"
+                  refId="Package\Carga de Datos\Origen de archivo plano.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
                   connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano]"
+                  refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano]"
                   name="Salida de origen de archivo plano">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[step]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[step]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[step]"
+                      externalMetadataColumnId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[step]"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[step]"
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[step]"
                       name="step"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -982,14 +1084,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[type]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[type]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[type]"
+                      externalMetadataColumnId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[type]"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[type]"
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[type]"
                       name="type"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1004,14 +1106,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[amount]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[amount]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[amount]"
+                      externalMetadataColumnId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[amount]"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[amount]"
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[amount]"
                       name="amount"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1026,14 +1128,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[nameOrig]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[nameOrig]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[nameOrig]"
+                      externalMetadataColumnId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[nameOrig]"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[nameOrig]"
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[nameOrig]"
                       name="nameOrig"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1048,14 +1150,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[oldbalanceOrg]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[oldbalanceOrg]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[oldbalanceOrg]"
+                      externalMetadataColumnId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[oldbalanceOrg]"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[oldbalanceOrg]"
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[oldbalanceOrg]"
                       name="oldbalanceOrg"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1070,14 +1172,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[newbalanceOrig]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[newbalanceOrig]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[newbalanceOrig]"
+                      externalMetadataColumnId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[newbalanceOrig]"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[newbalanceOrig]"
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[newbalanceOrig]"
                       name="newbalanceOrig"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1092,14 +1194,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[nameDest]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[nameDest]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[nameDest]"
+                      externalMetadataColumnId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[nameDest]"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[nameDest]"
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[nameDest]"
                       name="nameDest"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1114,14 +1216,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[oldbalanceDest]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[oldbalanceDest]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[oldbalanceDest]"
+                      externalMetadataColumnId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[oldbalanceDest]"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[oldbalanceDest]"
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[oldbalanceDest]"
                       name="oldbalanceDest"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1136,14 +1238,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[newbalanceDest]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[newbalanceDest]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[newbalanceDest]"
+                      externalMetadataColumnId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[newbalanceDest]"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[newbalanceDest]"
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[newbalanceDest]"
                       name="newbalanceDest"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1158,14 +1260,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[isFraud]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[isFraud]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[isFraud]"
+                      externalMetadataColumnId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[isFraud]"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[isFraud]"
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[isFraud]"
                       name="isFraud"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1180,14 +1282,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[isFlaggedFraud]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[isFlaggedFraud]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[isFlaggedFraud]"
+                      externalMetadataColumnId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[isFlaggedFraud]"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[isFlaggedFraud]"
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].Columns[isFlaggedFraud]"
                       name="isFlaggedFraud"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1205,67 +1307,67 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[step]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[step]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="step" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[type]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[type]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="type" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[amount]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[amount]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="amount" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[nameOrig]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[nameOrig]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="nameOrig" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[oldbalanceOrg]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[oldbalanceOrg]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="oldbalanceOrg" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[newbalanceOrig]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[newbalanceOrig]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="newbalanceOrig" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[nameDest]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[nameDest]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="nameDest" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[oldbalanceDest]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[oldbalanceDest]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="oldbalanceDest" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[newbalanceDest]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[newbalanceDest]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="newbalanceDest" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[isFraud]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[isFraud]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="isFraud" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[isFlaggedFraud]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano].ExternalColumns[isFlaggedFraud]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -1273,27 +1375,27 @@
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano]"
+                  refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano]"
                   isErrorOut="true"
                   name="Salida de error de origen de archivo plano">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
                       codePage="1252"
                       dataType="text"
                       description="Columna de salida de error de origen de archivo plano"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
                       name="Columna de salida de error de origen de archivo plano" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      refId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      lineageId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1304,25 +1406,559 @@
           </components>
           <paths>
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
-              endId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              refId="Package\Carga de Datos.Paths[Salida de conversión de datos]"
+              endId="Package\Carga de Datos\Filas Ingresadas.Inputs[Entrada de Recuento de filas 1]"
               name="Salida de conversión de datos"
-              startId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos]" />
+              startId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de conversión de datos]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de error de conversión de datos]"
-              endId="Package\Tarea Flujo de datos\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB]"
+              refId="Package\Carga de Datos.Paths[Salida de error de conversión de datos]"
+              endId="Package\Carga de Datos\Filas Excluidas.Inputs[Entrada de Recuento de filas 1]"
               name="Salida de error de conversión de datos"
-              startId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos]" />
+              startId="Package\Carga de Datos\Conversión de datos.Outputs[Salida de error de conversión de datos]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano]"
-              endId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos]"
+              refId="Package\Carga de Datos.Paths[Salida de origen de archivo plano]"
+              endId="Package\Carga de Datos\Conversión de datos.Inputs[Entrada de conversión de datos]"
               name="Salida de origen de archivo plano"
-              startId="Package\Tarea Flujo de datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano]" />
+              startId="Package\Carga de Datos\Origen de archivo plano.Outputs[Salida de origen de archivo plano]" />
+            <path
+              refId="Package\Carga de Datos.Paths[Salida de Recuento de filas 1]"
+              endId="Package\Carga de Datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de Recuento de filas 1"
+              startId="Package\Carga de Datos\Filas Ingresadas.Outputs[Salida de Recuento de filas 1]" />
+            <path
+              refId="Package\Carga de Datos.Paths[Salida de Recuento de filas 11]"
+              endId="Package\Carga de Datos\Destino de OLE DB 1.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de Recuento de filas 1"
+              startId="Package\Carga de Datos\Filas Excluidas.Outputs[Salida de Recuento de filas 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Reportes"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{CF8D46AC-ECAA-4DE6-B7E0-262C20FC74CE}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Reportes"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Reportes\ADO NET Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="ADO NET Source"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Transaction"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">0</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Reportes\ADO NET Source.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PC-JACG.ZemogaExercise.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[PC-JACG.ZemogaExercise.sa]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[TransactionsId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[TransactionsId]"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[TransactionsId]"
+                      name="TransactionsId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[Step]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Step]"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[Step]"
+                      name="Step"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[Type]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Type]"
+                      length="50"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[Type]"
+                      name="Type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[Amount]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Amount]"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[Amount]"
+                      name="Amount"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[NameOrig]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[NameOrig]"
+                      length="500"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[NameOrig]"
+                      name="NameOrig"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[OldBalanceOrg]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[OldBalanceOrg]"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[OldBalanceOrg]"
+                      name="OldBalanceOrg"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[NewBalanceOrig]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[NewBalanceOrig]"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[NewBalanceOrig]"
+                      name="NewBalanceOrig"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[NameDest]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[NameDest]"
+                      length="500"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[NameDest]"
+                      name="NameDest"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[OldBalanceDest]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[OldBalanceDest]"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[OldBalanceDest]"
+                      name="OldBalanceDest"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[NewBalanceDest]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[NewBalanceDest]"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[NewBalanceDest]"
+                      name="NewBalanceDest"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[IsFraud]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[IsFraud]"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[IsFraud]"
+                      name="IsFraud"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[IsFlaggedFraud]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[IsFlaggedFraud]"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[IsFlaggedFraud]"
+                      name="IsFlaggedFraud"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[TransactionsId]"
+                      dataType="i4"
+                      name="TransactionsId" />
+                    <externalMetadataColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Step]"
+                      dataType="i8"
+                      name="Step" />
+                    <externalMetadataColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Type]"
+                      dataType="wstr"
+                      length="50"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Amount]"
+                      dataType="cy"
+                      name="Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[NameOrig]"
+                      dataType="wstr"
+                      length="500"
+                      name="NameOrig" />
+                    <externalMetadataColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[OldBalanceOrg]"
+                      dataType="cy"
+                      name="OldBalanceOrg" />
+                    <externalMetadataColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[NewBalanceOrig]"
+                      dataType="cy"
+                      name="NewBalanceOrig" />
+                    <externalMetadataColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[NameDest]"
+                      dataType="wstr"
+                      length="500"
+                      name="NameDest" />
+                    <externalMetadataColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[OldBalanceDest]"
+                      dataType="cy"
+                      name="OldBalanceDest" />
+                    <externalMetadataColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[NewBalanceDest]"
+                      dataType="cy"
+                      name="NewBalanceDest" />
+                    <externalMetadataColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[IsFraud]"
+                      dataType="i8"
+                      name="IsFraud" />
+                    <externalMetadataColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[IsFlaggedFraud]"
+                      dataType="i8"
+                      name="IsFlaggedFraud" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[TransactionsId]"
+                      dataType="i4"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[TransactionsId]"
+                      name="TransactionsId" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Step]"
+                      dataType="i8"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Step]"
+                      name="Step" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Type]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Type]"
+                      name="Type" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Amount]"
+                      dataType="cy"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Amount]"
+                      name="Amount" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[NameOrig]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[NameOrig]"
+                      name="NameOrig" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[OldBalanceOrg]"
+                      dataType="cy"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[OldBalanceOrg]"
+                      name="OldBalanceOrg" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[NewBalanceOrig]"
+                      dataType="cy"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[NewBalanceOrig]"
+                      name="NewBalanceOrig" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[NameDest]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[NameDest]"
+                      name="NameDest" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[OldBalanceDest]"
+                      dataType="cy"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[OldBalanceDest]"
+                      name="OldBalanceDest" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[NewBalanceDest]"
+                      dataType="cy"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[NewBalanceDest]"
+                      name="NewBalanceDest" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[IsFraud]"
+                      dataType="i8"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[IsFraud]"
+                      name="IsFraud" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[IsFlaggedFraud]"
+                      dataType="i8"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[IsFlaggedFraud]"
+                      name="IsFlaggedFraud" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Reportes\Agregado"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Agregado;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;3"
+              description="Agrega datos mediante funciones como Average, Sum, Count, Max y Min. Por ejemplo, se agrupan datos para calcular la suma de las ventas por producto o el promedio de visitas por día."
+              name="Agregado"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número aproximado de claves GROUP BY que produce la agregación. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 de valores de clave. No especificado indica que no se usó ningún valor de KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el número exacto de claves GROUP BY que produce la agregación. Si se especifica un valor de KeyScale, el valor de Keys tiene prioridad."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número aproximado de valores distintos de una columna que cuenta la agregación de forma distintiva. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 valores de clave. No especificado indica que no se usa ningún valor de CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el número exacto de valores distintos de una columna que cuenta la agregación de forma distintiva. Si se especifica un valor de CountDistinctScale, el valor de CountDistinctKeys tiene prioridad."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje en el que puede ampliarse la memoria durante la agregación. Los valores válidos están comprendidos entre 1 y 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Reportes\Agregado.Inputs[Entrada de agregado 1]"
+                  name="Entrada de agregado 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Reportes\Agregado.Inputs[Entrada de agregado 1].Columns[Amount]"
+                      cachedDataType="cy"
+                      cachedName="Amount"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[Amount]" />
+                    <inputColumn
+                      refId="Package\Reportes\Agregado.Inputs[Entrada de agregado 1].Columns[IsFraud]"
+                      cachedDataType="i8"
+                      cachedName="IsFraud"
+                      lineageId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[IsFraud]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Reportes\Agregado.Outputs[Salida de agregado 1]"
+                  name="Salida de agregado 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica el número aproximado de claves GROUP BY que produce la agregación. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 de valores de clave. No especificado indica que no se usó ningún valor de KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Especifica el número exacto de claves GROUP BY que produce la agregación. Si se especifica un valor de KeyScale, el valor de Keys tiene prioridad."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Reportes\Agregado.Outputs[Salida de agregado 1].Columns[Amount]"
+                      dataType="cy"
+                      lineageId="Package\Reportes\Agregado.Outputs[Salida de agregado 1].Columns[Amount]"
+                      name="Amount">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[Amount]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Reportes\Agregado.Outputs[Salida de agregado 1].Columns[IsFraud]"
+                      dataType="i8"
+                      lineageId="Package\Reportes\Agregado.Outputs[Salida de agregado 1].Columns[IsFraud]"
+                      name="IsFraud">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output].Columns[IsFraud]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Reportes\Destino de archivo plano"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destino de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Destino de archivo plano"
+              localeId="3082"
+              name="Destino de archivo plano">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si los datos sobrescriben el archivo de destino o se anexan al mismo."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el texto para escribir en el archivo de destino antes de escribir ningún dato."
+                  expressionType="Notify"
+                  name="Header" />
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Reportes\Destino de archivo plano.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Salida]"
+                  connectionManagerRefId="Package.ConnectionManagers[Salida]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Reportes\Destino de archivo plano.Inputs[Entrada de destino de archivo plano]"
+                  hasSideEffects="true"
+                  name="Entrada de destino de archivo plano">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Reportes\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[Amount]"
+                      cachedDataType="cy"
+                      cachedName="Amount"
+                      externalMetadataColumnId="Package\Reportes\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Amount]"
+                      lineageId="Package\Reportes\Agregado.Outputs[Salida de agregado 1].Columns[Amount]" />
+                    <inputColumn
+                      refId="Package\Reportes\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[IsFraud]"
+                      cachedDataType="i8"
+                      cachedName="IsFraud"
+                      externalMetadataColumnId="Package\Reportes\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[IsFraud]"
+                      lineageId="Package\Reportes\Agregado.Outputs[Salida de agregado 1].Columns[IsFraud]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Reportes\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Amount]"
+                      dataType="cy"
+                      name="Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Reportes\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[IsFraud]"
+                      dataType="i8"
+                      name="IsFraud" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Reportes.Paths[ADO NET Source Output]"
+              endId="Package\Reportes\Agregado.Inputs[Entrada de agregado 1]"
+              name="ADO NET Source Output"
+              startId="Package\Reportes\ADO NET Source.Outputs[ADO NET Source Output]" />
+            <path
+              refId="Package\Reportes.Paths[Salida de agregado 1]"
+              endId="Package\Reportes\Destino de archivo plano.Inputs[Entrada de destino de archivo plano]"
+              name="Salida de agregado 1"
+              startId="Package\Reportes\Agregado.Outputs[Salida de agregado 1]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{B457CA09-8BC8-4FB7-89FA-D355F75D9DAE}"
+      DTS:From="Package\Carga de Datos"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Reportes" />
+  </DTS:PrecedenceConstraints>
   <DTS:EventHandlers>
     <DTS:EventHandler
       DTS:refId="Package.EventHandlers[OnError]"
@@ -1357,33 +1993,71 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="176,42"
-          Id="Package\Tarea Flujo de datos"
-          TopLeft="270,156" />
+          Size="151,42"
+          Id="Package\Carga de Datos"
+          TopLeft="277,78" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\Reportes"
+          TopLeft="269,145" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="352.5,120">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-23,25"
+              Start="0,0"
+              End="-23,17.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.5"
+                    Point2="0,12.5"
+                    Point3="-4,12.5" />
+                  <mssgle:LineSegment
+                    End="-19,12.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-19,12.5"
+                    Point2="-23,12.5"
+                    Point3="-23,16.5" />
+                  <mssgle:LineSegment
+                    End="-23,17.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Tarea Flujo de datos">
+    design-time-name="Package\Carga de Datos">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="168,42"
-          Id="Package\Tarea Flujo de datos\Destino de OLE DB"
+          Id="Package\Carga de Datos\Destino de OLE DB"
           TopLeft="498,254" />
         <NodeLayout
           Size="175,42"
-          Id="Package\Tarea Flujo de datos\Conversión de datos"
+          Id="Package\Carga de Datos\Conversión de datos"
           TopLeft="147,132" />
         <NodeLayout
           Size="191,42"
-          Id="Package\Tarea Flujo de datos\Origen de archivo plano"
+          Id="Package\Carga de Datos\Origen de archivo plano"
           TopLeft="480.5,28.5" />
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de archivo plano]"
+          Id="Package\Carga de Datos.Paths[Salida de origen de archivo plano]"
           TopLeft="576,70.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1416,32 +2090,74 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Carga de Datos\Destino de OLE DB 1"
+          TopLeft="694,135" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Carga de Datos\Filas Ingresadas"
+          TopLeft="254,271" />
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
+          Id="Package\Carga de Datos.Paths[Salida de conversión de datos]"
           TopLeft="234.5,174">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="347.5,80"
+              EndConnector="97,97"
               Start="0,0"
-              End="347.5,72.5">
+              End="97,89.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36" />
+                    End="0,44.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,36"
-                    Point2="0,40"
-                    Point3="4,40" />
+                    Point1="0,44.5"
+                    Point2="0,48.5"
+                    Point3="4,48.5" />
                   <mssgle:LineSegment
-                    End="343.5,40" />
+                    End="93,48.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="343.5,40"
-                    Point2="347.5,40"
-                    Point3="347.5,44" />
+                    Point1="93,48.5"
+                    Point2="97,48.5"
+                    Point3="97,52.5" />
                   <mssgle:LineSegment
-                    End="347.5,72.5" />
+                    End="97,89.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga de Datos.Paths[Salida de Recuento de filas 1]"
+          TopLeft="409,292">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="89,-17"
+              Start="0,0"
+              End="81.5,-17">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="40.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="40.5,0"
+                    Point2="44.5,0"
+                    Point3="44.5,-4" />
+                  <mssgle:LineSegment
+                    End="44.5,-13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="44.5,-13"
+                    Point2="44.5,-17"
+                    Point3="48.5,-17" />
+                  <mssgle:LineSegment
+                    End="81.5,-17" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1451,38 +2167,84 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="177,42"
-          Id="Package\Tarea Flujo de datos\Destino de OLE DB 1"
-          TopLeft="694,135" />
+          Size="146,42"
+          Id="Package\Carga de Datos\Filas Excluidas"
+          TopLeft="428,118" />
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de error de conversión de datos]"
-          TopLeft="322,154.5">
+          Id="Package\Carga de Datos.Paths[Salida de error de conversión de datos]"
+          TopLeft="322,153">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="372,0"
+              EndConnector="106,-14"
               Start="0,0"
-              End="364.5,0">
+              End="98.5,-14">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="364.5,0" />
+                    End="49,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="49,0"
+                    Point2="53,0"
+                    Point3="53,-4" />
+                  <mssgle:LineSegment
+                    End="53,-10" />
+                  <mssgle:CubicBezierSegment
+                    Point1="53,-10"
+                    Point2="53,-14"
+                    Point3="57,-14" />
+                  <mssgle:LineSegment
+                    End="98.5,-14" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="96.5067578125,5,171.486484375,10.3349609375"
+              BoundingBox="-32.7432421875,1,171.486484375,10.3349609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga de Datos.Paths[Salida de Recuento de filas 11]"
+          TopLeft="574,139">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="120,17"
+              Start="0,0"
+              End="112.5,17">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="56,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="56,0"
+                    Point2="60,0"
+                    Point3="60,4" />
+                  <mssgle:LineSegment
+                    End="60,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="60,13"
+                    Point2="60,17"
+                    Point3="64,17" />
+                  <mssgle:LineSegment
+                    End="112.5,17" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Destino de OLE DB">
+    design-time-name="Package\Carga de Datos\Destino de OLE DB 1">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1495,7 +2257,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Destino de OLE DB 1">
+    design-time-name="Package\Carga de Datos\Destino de OLE DB">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1504,6 +2266,90 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Reportes">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Reportes\ADO NET Source"
+          TopLeft="106,20" />
+        <NodeLayout
+          Size="124,42"
+          Id="Package\Reportes\Agregado"
+          TopLeft="125,108" />
+        <EdgeLayout
+          Id="Package\Reportes.Paths[ADO NET Source Output]"
+          TopLeft="186,62">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="195,42"
+          Id="Package\Reportes\Destino de archivo plano"
+          TopLeft="99,207" />
+        <EdgeLayout
+          Id="Package\Reportes.Paths[Salida de agregado 1]"
+          TopLeft="187,150">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9.5,57"
+              Start="0,0"
+              End="9.5,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.5"
+                    Point2="0,28.5"
+                    Point3="4,28.5" />
+                  <mssgle:LineSegment
+                    End="5.5,28.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.5,28.5"
+                    Point2="9.5,28.5"
+                    Point3="9.5,32.5" />
+                  <mssgle:LineSegment
+                    End="9.5,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Reportes\ADO NET Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
