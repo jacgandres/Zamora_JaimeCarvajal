@@ -3,9 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebSite", "WebSite", "{5F8C5ACF-6925-4C42-B6EF-85C4D951B4FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SSIS", "SSIS", "{E55DD393-3268-499F-800C-AD9B5302BAD5}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "LoadFileInfo", "LoadFileInfo\LoadFileInfo.dtproj", "{2D6CF0E1-01EA-4A82-AB0C-AF2E5AEBA451}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D6CF0E1-01EA-4A82-AB0C-AF2E5AEBA451}.Development|Default.ActiveCfg = Development
+		{2D6CF0E1-01EA-4A82-AB0C-AF2E5AEBA451}.Development|Default.Build.0 = Development
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2D6CF0E1-01EA-4A82-AB0C-AF2E5AEBA451} = {E55DD393-3268-499F-800C-AD9B5302BAD5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {97B8CA8E-98A6-4ED2-924D-5AC02944ED7E}
