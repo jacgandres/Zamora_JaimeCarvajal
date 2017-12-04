@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_YfcD4NbBEeehfKghwO5fJA" comment="connectionComment" label="connectionLabel" dataPackage="_YfcD4dbBEeehfKghwO5fJA" mappingTypeUsed="true" mappingTypeId="id_MSSQL"/>
+  <TalendMetadata:GenericPackage xmi:id="_YfcD4dbBEeehfKghwO5fJA" dataManager="_YfcD4NbBEeehfKghwO5fJA">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_YfcD4tbBEeehfKghwO5fJA" properties="deleted&#xA;&#xA;true&#xA;&#xA;" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_YfcD49bBEeehfKghwO5fJA" name="TransactionsId" id="28" label="TransactionsId" length="10" sourceType="INT" talendType="id_Integer" nullable="false">
+        <initialValue xmi:id="_YfcD5NbBEeehfKghwO5fJA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_YfcD5dbBEeehfKghwO5fJA" name="Step" id="29" label="Step" length="19" sourceType="BIGINT" talendType="id_Long">
+        <initialValue xmi:id="_YfcD5tbBEeehfKghwO5fJA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_YfcD59bBEeehfKghwO5fJA" name="Type" id="30" label="Type" length="50" sourceType="VARCHAR" talendType="id_String">
+        <initialValue xmi:id="_YfcD6NbBEeehfKghwO5fJA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_YfcD6dbBEeehfKghwO5fJA" name="Amount" id="31" label="Amount" length="19" precision="4" sourceType="VARBINARY" talendType="id_Object">
+        <initialValue xmi:id="_YfcD6tbBEeehfKghwO5fJA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_YfcD69bBEeehfKghwO5fJA" name="NameOrig" id="32" label="NameOrig" length="500" sourceType="VARCHAR" talendType="id_String">
+        <initialValue xmi:id="_YfcD7NbBEeehfKghwO5fJA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_YfcD7dbBEeehfKghwO5fJA" name="OldBalanceOrg" id="33" label="OldBalanceOrg" length="19" precision="4" sourceType="VARBINARY" talendType="id_Object">
+        <initialValue xmi:id="_YfcD7tbBEeehfKghwO5fJA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_YfcD79bBEeehfKghwO5fJA" name="NewBalanceOrig" id="34" label="NewBalanceOrig" length="19" precision="4" sourceType="VARBINARY" talendType="id_Object">
+        <initialValue xmi:id="_YfcD8NbBEeehfKghwO5fJA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_YfcD8dbBEeehfKghwO5fJA" name="NameDest" id="35" label="NameDest" length="500" sourceType="VARCHAR" talendType="id_String">
+        <initialValue xmi:id="_YfcD8tbBEeehfKghwO5fJA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_YfcD89bBEeehfKghwO5fJA" name="OldBalanceDest" id="36" label="OldBalanceDest" length="19" precision="4" sourceType="VARBINARY" talendType="id_Object">
+        <initialValue xmi:id="_YfcD9NbBEeehfKghwO5fJA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_YfcD9dbBEeehfKghwO5fJA" name="NewBalanceDest" id="37" label="NewBalanceDest" length="19" precision="4" sourceType="VARBINARY" talendType="id_Object">
+        <initialValue xmi:id="_YfcD9tbBEeehfKghwO5fJA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_YfcD99bBEeehfKghwO5fJA" name="IsFraud" id="38" label="IsFraud" length="19" sourceType="BIGINT" talendType="id_Long">
+        <initialValue xmi:id="_YfcD-NbBEeehfKghwO5fJA" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_YfcD-dbBEeehfKghwO5fJA" name="IsFlaggedFraud" id="39" label="IsFlaggedFraud" length="19" sourceType="BIGINT" talendType="id_Long">
+        <initialValue xmi:id="_YfcD-tbBEeehfKghwO5fJA" body=""/>
+      </feature>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>
